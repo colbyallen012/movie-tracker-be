@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-app.set('port', 3001 || process.env.PORT);
+// app.set('port', 3001 || process.env.PORT);
+app.set('port', process.env.PORT || 3001)
 app.use(express.json());
 
 // DB Setup
