@@ -1,7 +1,13 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/favorites_tracker',
+    connection: 'postgres://localhost/movie_favs',
+    migrations: {
+      directory: './db/migrations'
+    },
+    seeds: {
+      directory: './db/seeds/dev'
+    },
     useNullAsDefault: true
   },
   production: {
